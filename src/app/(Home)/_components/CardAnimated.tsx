@@ -55,7 +55,7 @@ export const CardAnimated = ({
 };
 
 interface HeaderProps {
-  translate: number | string;
+  translate: MotionValue<number>;
   titleComponent: ReactNode;
 }
 
@@ -79,7 +79,7 @@ export const Card = ({
 }: {
   rotate: MotionValue<number>;
   scale: MotionValue<number>;
-  translate: string | number;
+  translate: MotionValue<number>;
   children: React.ReactNode;
 }) => {
   return (
