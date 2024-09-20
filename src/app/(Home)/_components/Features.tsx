@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { easeIn, stagger, useAnimate, useInView } from "framer-motion";
-import { tr } from "framer-motion/client";
+// import { tr } from "framer-motion/client";
 
 const Features = () => {
   const [scope, animate] = useAnimate();
