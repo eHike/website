@@ -40,8 +40,8 @@ const Projects = () => {
             Elevate your online presence with bespoke websites tailored to your
             needs.From sleek design to seamless functionality, we blend
             innovation with ease to craft digital solutions that captivate and
-            convert. Let's create something extraordinary together! We offer two
-            tiers of website solutions to suit your unique needs.
+            convert. Let&apos;s create something extraordinary together! We
+            offer two tiers of website solutions to suit your unique needs.
           </p>
         </div>
         <br />
