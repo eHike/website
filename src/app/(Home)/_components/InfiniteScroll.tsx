@@ -85,7 +85,7 @@ export const InfiniteScroll = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li
             className="w-[250px] max-w-full relative rounded-2xl border-[1px] border-blue-300 border-opacity-30 flex-shrink-0  px-4 py-2  "
             style={{
