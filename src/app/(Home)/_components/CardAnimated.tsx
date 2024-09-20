@@ -79,7 +79,7 @@ export const Card = ({
 }: {
   rotate: MotionValue<number>;
   scale: MotionValue<number>;
-  translate: MotionValue<number>;
+  translate: string | number;
   children: React.ReactNode;
 }) => {
   return (
