@@ -22,21 +22,16 @@ const Projects = () => {
   }, [inView]);
   return (
     <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div ref={scope} className="text-center ">
-        <div className="w-[80vw] min-w-[280px] mx-auto">
-          <p className="text-[30px] font-bold anim_fadeup leading-[50px]">
-            Tech That Impact
+      <div ref={scope} className="text-center mt-5 h-[100vh]">
+        <div className=" flex flex-col justify-center items-center">
+          <p className="anim_fadeup text-[30px] font-bold anim_fadeup leading-[50px] text-3xl md:text-5xl ">
+            Tech that{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-br from-[#FB913D] to-[#FB7284]">
+              impact
+            </span>
           </p>
 
-          <p className="text-[15px] anim_fadeup leading-7 text-gray-400">
+          <p className="mt-10 text-[15px] max-w-4xl anim_fadeup leading-7 text-gray-400">
             Elevate your online presence with bespoke websites tailored to your
             needs.From sleek design to seamless functionality, we blend
             innovation with ease to craft digital solutions that captivate and
@@ -46,7 +41,7 @@ const Projects = () => {
         </div>
         <br />
 
-        <div className="flex justify-around flex-wrap">
+        <div className="flex justify-around flex-wrap mt-10">
           <div className="anim_fadeup  max-w-[450px] min-w-[280px] ">
             <WobbleCard containerClassName="relative" className="relative ">
               <div className="space-y-5 px-6 pt-2">

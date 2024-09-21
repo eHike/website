@@ -25,17 +25,19 @@ const Header = () => {
             menu == true ? "h-[200px]" : "h-0"
           }`}
         >
-          <p className="md:inline text-lg font-bold md:inline">Company</p>
-          <a href="" className="md:pl-10 block md:inline">
+          <p className="md:inline text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#6A3BBF] to-[#FF99D7] ">
+            eHike
+          </p>
+          <a href="#" className="md:ml-10 block md:inline">
             link1
           </a>
-          <a href="" className="md:pl-7 block md:inline">
+          <a href="" className="md:ml-7 block md:inline">
             link1
           </a>
-          <a href="" className="md:pl-7 block  md:inline">
+          <a href="" className="md:ml-7 block  md:inline">
             link1
           </a>
-          <a href="" className="md:pl-7 block md:inline">
+          <a href="" className="md:ml-7 block md:inline">
             link1
           </a>
         </div>

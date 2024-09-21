@@ -12,42 +12,13 @@ const page = () => {
     <div className={` ${styles.main} `}>
       {" "}
       <div className={`${styles.mainin}`}>
-        <div className="px-5">
-          {/* Intro */}
-          <br />
-          <br />
-          <br />
-          <Intro></Intro>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <IntroImage></IntroImage>
-          <br />
-          <br />
-          <br />
-          <Projects></Projects>
-          <br />
-          <br />
-          <br />
-          <Stories></Stories>
-          <br />
-          <br />
-          <br />
-          <Features></Features>
-          <br />
-          <br />
-          <br />
-          <Cookie></Cookie>
-          <br />
-          <br />
-          <br />
+        <div className="mx-5">
+          <Intro />
+          <IntroImage />
+          <Projects />
+          <Stories />
+          <Features />
+          <Cookie />
         </div>
       </div>
     </div>

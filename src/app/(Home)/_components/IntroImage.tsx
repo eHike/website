@@ -14,7 +14,7 @@ const IntroImage = () => {
     }
   }, [View]);
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden h-[70vh]">
       <div
         className={`w-[90vw] text-center mx-auto h-96 ${
           styles.introimage

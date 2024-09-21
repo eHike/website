@@ -21,10 +21,14 @@ const Features = () => {
   }, [inView]);
   return (
     <div ref={scope}>
-      <p className="text-[30px] font-bold anim_fadeup leading-[50px] text-center mt-32">
-        Features
-      </p>
-      <br />
+      <div className="flex justify-center">
+        <p className="anim_fadeup text-[30px] font-bold anim_fadeup leading-[50px] text-3xl md:text-5xl mb-20 ">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#f86285] to-[#5142f2]">
+            Features
+          </span>
+        </p>
+      </div>
+
       <div className="flex flex-wrap justify-center gap-x-5">
         <div
           className="anim_fadeup w-[450px] max-w-[450px] mx-4 my-4 min-w-[280px] h-[300px] border-[1px] border-blue-300 border-opacity-40 rounded-lg"
