@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import React, {
+  ReactNode,
   createContext,
   useContext,
   useEffect,
@@ -9,9 +10,15 @@ import React, {
   useState,
 } from "react";
 
-const ModalContext = createContext(undefined);
+interface ModalContextType {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
 
-export const ModalProvider = ({ children }) => {
+const ModalContext =
+  (createContext < ModalContextType) | (undefined > undefined);
+
+export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -29,15 +36,24 @@ export const useModal = () => {
   return context;
 };
 
-export function Modal({ children }) {
+export function Modal({ children }: { children: ReactNode }) {
   return <ModalProvider>{children}</ModalProvider>;
 }
 
-export const ModalTrigger = ({ children, className }) => {
+export const ModalTrigger = ({
+  children,
+  className,
+}: {
+  children: ReactNode,
+  className?: string,
+}) => {
   const { setOpen } = useModal();
   return (
     <button
-      className={cn("relative overflow-hidden", className)}
+      className={cn(
+        "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
+        className
+      )}
       onClick={() => setOpen(true)}
     >
       {children}
@@ -45,7 +61,13 @@ export const ModalTrigger = ({ children, className }) => {
   );
 };
 
-export const ModalBody = ({ children, className }) => {
+export const ModalBody = ({
+  children,
+  className,
+}: {
+  children: ReactNode,
+  className?: string,
+}) => {
   const { open } = useModal();
 
   useEffect(() => {
@@ -117,7 +139,13 @@ export const ModalBody = ({ children, className }) => {
   );
 };
 
-export const ModalContent = ({ children, className }) => {
+export const ModalContent = ({
+  children,
+  className,
+}: {
+  children: ReactNode,
+  className?: string,
+}) => {
   return (
     <div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
       {children}
@@ -125,7 +153,13 @@ export const ModalContent = ({ children, className }) => {
   );
 };
 
-export const ModalFooter = ({ children, className }) => {
+export const ModalFooter = ({
+  children,
+  className,
+}: {
+  children: ReactNode,
+  className?: string,
+}) => {
   return (
     <div
       className={cn(
@@ -138,7 +172,7 @@ export const ModalFooter = ({ children, className }) => {
   );
 };
 
-const Overlay = ({ className }) => {
+const Overlay = ({ className }: { className?: string }) => {
   return (
     <motion.div
       initial={{
@@ -186,9 +220,12 @@ const CloseIcon = () => {
 
 // Hook to detect clicks outside of a component.
 // Add it in a separate file, I've added here for simplicity
-export const useOutsideClick = (ref, callback) => {
+export const useOutsideClick = (
+  ref: React.RefObject<HTMLDivElement>,
+  callback: Function
+) => {
   useEffect(() => {
-    const listener = (event) => {
+    const listener = (event: any) => {
       // DO NOTHING if the element being clicked is the target element or their children
       if (!ref.current || ref.current.contains(event.target)) {
         return;
