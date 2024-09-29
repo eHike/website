@@ -45,7 +45,7 @@ export const ModalTrigger = ({ children, className }) => {
   );
 };
 
-export const ModalBody = ({ children, className }) => {
+export const ModalBody = ({ children, className = "" }) => {
   const { open } = useModal();
 
   useEffect(() => {
@@ -117,7 +117,7 @@ export const ModalBody = ({ children, className }) => {
   );
 };
 
-export const ModalContent = ({ children, className }) => {
+export const ModalContent = ({ children, className = "" }) => {
   return (
     <div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
       {children}
