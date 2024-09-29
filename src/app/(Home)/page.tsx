@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./_components/Home.module.css";
-import Intro from "./_components/Intro";
-import IntroImage from "./_components/IntroImage";
-import Projects from "./_components/Projects";
-import Stories from "./_components/Stories";
-import Features from "./_components/Features";
-import Cookie from "./_components/Cookie";
+import styles from "./components/Home.module.css";
+import Intro from "./components/Intro";
+import IntroImage from "./components/IntroImage";
+import Projects from "./components/Projects";
+import Stories from "./components/Stories";
+import Features from "./components/Features";
+import Cookie from "./components/Cookie";
 // import { CardAnimated } from './_components/CardAnimated'
 const page = () => {
   return (
