@@ -52,8 +52,8 @@ const Cookie = () => {
               </span>
             </a>
           </ModalTrigger>
-          <ModalBody>
-            <ModalContent>
+          <ModalBody className="">
+            <ModalContent className="">
               <h4 className="text-lg md:text-2xl text-neutral-600 font-bold text-center mb-8">
                 Book your trip to{" "}
                 <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
