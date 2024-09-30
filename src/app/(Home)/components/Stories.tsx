@@ -66,23 +66,21 @@ const Stories = () => {
     }
   }, [inView]);
   return (
-    <div
-      ref={scope}
-      className="text-center h-auto mt-16 flex flex-col items-center justify-center"
-    >
+    <div ref={scope} className="text-center h-auto mt-16 ">
       <p className="anim_fadeup text-[45px] font-bold anim_fadeup leading-[50px] text-3xl md:text-5xl mb-20 ">
         Stories from the{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#f86285] to-[#5142f2]">
           heart
         </span>
       </p>
-
-      <InfiniteScroll items={items} speed="slow"></InfiniteScroll>
-      <InfiniteScroll
-        items={items}
-        direction="right"
-        speed="slow"
-      ></InfiniteScroll>
+      <div className="flex flex-col items-center justify-center">
+        <InfiniteScroll items={items} speed="slow"></InfiniteScroll>
+        <InfiniteScroll
+          items={items}
+          direction="right"
+          speed="slow"
+        ></InfiniteScroll>
+      </div>
     </div>
   );
 };
