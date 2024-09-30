@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
 import { easeIn, stagger, useAnimate, useInView } from "framer-motion";
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalTrigger,
-} from "@/Components/ui/animated-modal";
+// import {
+//   Modal,
+//   ModalBody,
+//   ModalContent,
+//   ModalFooter,
+//   ModalTrigger,
+// } from "@/Components/ui/animated-modal";
 
 const Cookie = () => {
   const [scope, animate] = useAnimate();
@@ -41,16 +41,16 @@ const Cookie = () => {
           efficiency and affordability. Let&apos;s discuss your digital strategy
           today for free.
         </p>
-        <Modal>
+        <a
+          className={`anim_fadeup relative mt-6 inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 `}
+        >
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-8 py-1 text-base font-medium text-white backdrop-blur-3xl">
+            Get Started
+          </span>
+        </a>
+        {/* <Modal>
           <ModalTrigger className=" flex justify-center group/modal-btn">
-            <a
-              className={`anim_fadeup relative mt-6 inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 `}
-            >
-              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-8 py-1 text-base font-medium text-white backdrop-blur-3xl">
-                Get Started
-              </span>
-            </a>
           </ModalTrigger>
           <ModalBody className="">
             <ModalContent className="">
@@ -62,7 +62,7 @@ const Cookie = () => {
                 now! ✈️
               </h4>
               <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
-                {/* form */}
+                
               </div>
             </ModalContent>
             <ModalFooter className="gap-4">
@@ -74,7 +74,7 @@ const Cookie = () => {
               </button>
             </ModalFooter>
           </ModalBody>
-        </Modal>
+        </Modal> */}
       </div>
     </div>
   );
