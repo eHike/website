@@ -10,7 +10,7 @@ import Cookie from "./components/Cookie";
 const page = () => {
   return (
     <div className={` ${styles.main} `}>
-      {" "}
+      {" fixing main"}
       <div className={`${styles.mainin}`}>
         <div className="mx-5">
           <Intro />

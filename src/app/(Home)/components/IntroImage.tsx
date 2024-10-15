@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 // import { div, view } from 'framer-motion/client'
 import { BorderBeam } from "@/Components/magicui/BorderBeam";
 import Image from "next/image";
-import tempImage from "@/app/favicon.ico";
+import tempImage from "../../../app/favicon.ico";
 
 const IntroImage = () => {
   const ref = useRef(null);
