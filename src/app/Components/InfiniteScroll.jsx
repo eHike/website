@@ -77,32 +77,37 @@ export const InfiniteScroll = ({
       >
         {items.map((item) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
+            className="w-[250px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[350px]"
             style={{
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
             }}
             key={item.name}
           >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
-                {item.quote}
-              </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.name}
-                  </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.title}
-                  </span>
-                </span>
-              </div>
-            </blockquote>
+            <a href={item.link} target="_blank">
+              <blockquote className="relative z-20">
+                {/* User Profile */}
+                <div className="flex items-center space-x-2">
+                  <img
+                    className="w-8 h-8 rounded-full"
+                    src={item.profilePicture}
+                    alt="User profile"
+                  />
+                  <div className="flex flex-col">
+                    <span className="text-base text-start font-semibold leading-5 text-gray-100">
+                      {item.name}
+                    </span>
+                    <span className="text-xs text-start text-gray-400">
+                      {item.title}
+                    </span>
+                  </div>
+                </div>
+                {/* Quote */}
+                <p className="mt-3 text-sm text-start text-gray-100">
+                  {item.quote}
+                </p>
+              </blockquote>
+            </a>
           </li>
         ))}
       </ul>
