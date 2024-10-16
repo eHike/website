@@ -1,5 +1,5 @@
 import React from "react";
-import { InfiniteScroll } from "../Components/InfiniteScroll";
+import { InfiniteScroll } from "../../Components/InfiniteScroll";
 const Stories = () => {
   const items = [
     {
