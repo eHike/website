@@ -1,6 +1,11 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import { easeIn, stagger, useAnimate, useInView } from "framer-motion";
 import { InfiniteScroll } from "../../Components/InfiniteScroll";
 const Stories = () => {
+  const [scope, animate] = useAnimate();
+  const inView = useInView(scope, { once: true });
+
   const items = [
     {
       link: "https://www.trustpilot.com/reviews/668265ac381660218193a4f9",
@@ -45,10 +50,37 @@ const Stories = () => {
       title: "General and laparoscopic surgeon",
     },
   ];
+
+
+  useEffect(() => {
+    if (inView) {
+      animate(
+        ".anim_fadeup",
+        { opacity: [0, 1], y: [20, 0] },
+        {
+          duration: 0.5,
+          ease: easeIn,
+          delay: stagger(0.3),
+        }
+      );
+    }
+  }, [inView]);
   return (
-    <div>
-      Stories
-      <InfiniteScroll items={items} />
+    <div ref={scope} className="text-center h-auto mt-16 ">
+      <p className="anim_fadeup text-[45px] font-bold anim_fadeup leading-[50px] text-3xl md:text-5xl mb-20 ">
+        Stories from the{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#f86285] to-[#5142f2]">
+          heart
+        </span>
+      </p>
+      {/* <div className="flex flex-col items-center justify-center"> */}
+        <InfiniteScroll items={items} speed="slow"></InfiniteScroll>
+        <InfiniteScroll
+          items={items}
+          direction="right"
+          speed="slow"
+        ></InfiniteScroll>
+      {/* </div> */}
     </div>
   );
 };
