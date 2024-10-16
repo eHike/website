@@ -9,7 +9,7 @@ const Stories = () => {
     { name: "Arifz", title: "title1" },
     { name: "Sudipz", title: "title2" },
     { name: "Arif2", title: "title1" },
-    { name: "Sudip2", title: "title3" },
+    { name: "Su dip2", title: "title3" },
   ];
   return (
     <div>
